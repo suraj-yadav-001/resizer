@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: orange;
+  place-items: center;
+  display: grid;
+}
+.box {
+  width: 30%;
+  height: auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 5px;
+}
+.uploader {
+  width: 100%;
+  height: 250px;
+  border: 2px dashed rgb(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.box.active .uploader{border: none;}
+
+.uploader img {
+  height:70px;
+  width:80px;
+  /* transform: scale(1.4); */
+}
+
+.box.active .uploader img{
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.box.active .uploader label{display: none;}
+
+.uploader label {
+  margin-top: 10px;
+}
+.tools {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  display: none;
+}
+
+.box.active .tools{
+  display: block;
+} 
+.tools .w_h {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools .w_h ._input{
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  width: 47.5%;
+  margin: 0 10px;
+  text-transform: capitalize;
+}
+._input input{ 
+  height: 40px;
+  padding: 0 10px;
+  margin-top: 4px;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.452);
+  border-radius: 4px;}
+
+  .checked_tools {
+    margin-top: 15px;
+  }
+  
+  .checked_tools ._ratio input[type="checkbox"] {
+    transform: scale(1.1);
+  }
+  .checked_tools hr {
+    margin: 5px 0;
+    opacity: 0.3;
+  }
+  .downloadBtn {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background-image: linear-gradient(45deg, #4774c7 0%, #6ec534 100%);
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+
+  /* media queries */
+@media (max-width: 600px) {
+  .box {
+    width: 60%;
+    /* display: flex; */
+  }
+} 
+
+@media (max-width: 320px) {
+  .tools .w_h ._input {
+    width: 50%;
+  }
+  .tools .w_h{
+    display:flex;
+    flex-direction: column;
+  }
+  .tools .checked_tools{
+    text-align: center;
+  }
+}
+/* media queries */
+@media (max-width: 1068px) {
+  .box {
+    width: 80%;
+  }
+}
+  
