@@ -118,7 +118,7 @@ body {
   }
 } 
 
-@media (max-width: 320px) {
+@media (max-width: 350px) {
   .tools .w_h ._input {
     width: 50%;
   }
